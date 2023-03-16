@@ -1,3 +1,6 @@
+
+//////////// PALINDROME FINDER ////////////
+
 const user_word = prompt('inserisci una parola');
 console.log(user_word);
 
@@ -27,4 +30,33 @@ function palindrome_finder(word_1, word_2) {
     }
 }
 
-palindrome_finder(user_word, reversed_word)
+palindrome_finder(user_word, reversed_word);
+
+
+
+//////////// PARI O DISPARI ////////////
+
+
+const user_team = prompt('pari o dispari?');
+console.log(user_team);
+
+const user_number = Number(prompt('Scegli un numero da 1 a 5!'))
+console.log(user_number);
+
+function computer_number () {
+    let pc_number = Math.floor(Math.random() * 5) + 1;
+    console.log(pc_number);
+    return pc_number
+}
+
+
+const sum = user_number + computer_number();
+console.log(sum);
+
+if (user_team == 'pari' && sum % 2 == 0){
+    console.log('Pari. Hai vinto!');
+} else if (user_team == 'dispari' && sum % 2 !== 0){
+    console.log('Dispari. Hai vinto!');
+} else {
+    console.log('Hai perso');
+}
